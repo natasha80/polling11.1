@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(193, 162, 243);
+  color: rgb(105, 105, 105);
+  font-family: BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+  font-size: 12px;
+}
+
+.polling {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.polling__messages {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  height: calc(95vh - 50px);
+  background-color: #fcf4f4;
+  border-radius: 2px;
+  border: 1px solid rgb(179, 177, 177);
+  padding: 1%;
+}
+
+.polling__wrapper {
+  margin-bottom: 3%;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.polling__messages-message {
+  padding: 8px;
+  border-radius: 2px;
+  border: 1px solid rgb(179, 177, 177);
+  margin-right: 2%;
+  margin-bottom: 1%;
+}
+
+.polling__messages-message * {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.message-email {
+  width: 42%;
+}
+
+.message-subject {
+  width: 29%;
+}
+
+.message-date {
+  width: 26%;
+}
