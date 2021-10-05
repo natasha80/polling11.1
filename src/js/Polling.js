@@ -1,8 +1,10 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
+/* eslint-disable linebreak-style */
 /* eslint-disable eol-last */
 import { interval } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
-import { mergeMap } from 'rxjs/operators';
+import { concatMap } from 'rxjs/operators';
 
 function getDate(dateMsg) {
   let date = new Date(dateMsg);
@@ -37,7 +39,7 @@ export default class Polling {
 
   getMail() {
     interval(4000).pipe(
-      mergeMap(() => ajax.getJSON(`${this.url}?id=${this.lastId}`)),
+      concatMap(() => ajax.getJSON(`${this.url}?id=${this.lastId}`)),
     )
       .subscribe((messages) => {
         this.render(messages);
